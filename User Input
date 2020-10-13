@@ -1,0 +1,44 @@
+int r = 8;
+int b = 9;
+int w = 10;
+int t = 500; 
+int number;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(r, OUTPUT);
+pinMode(b, OUTPUT);
+pinMode(w, OUTPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+Serial.println("Which number? ");
+while(Serial.available() == 0)
+{
+  
+}
+number = Serial.parseInt();
+if(number == 1)
+{
+  digitalWrite(r, HIGH);
+  digitalWrite(b , LOW);
+  digitalWrite(w, LOW);
+}
+
+if(number == 2)
+{
+  digitalWrite(b, HIGH);
+  digitalWrite(r, LOW);
+  digitalWrite(w, LOW);
+}
+
+if(number == 3)
+{
+  digitalWrite(w, HIGH);
+  digitalWrite(b , LOW);
+  digitalWrite(r, LOW);
+}
+
+}
